@@ -1,0 +1,6 @@
+
+using Spring MockMvc to test controller with static methods
+* don't forget to add accept(MediaType.Josn)
+Testing Post Method
+Use ObjectMapper to map a dto to a String Json
+look at BeerControllerTest#addBeer(BeerDto)

@@ -20,22 +20,22 @@ public class BeerController {
 
 
     @GetMapping("/{beerId}")
-    public ResponseEntity<BeerDto> getBeerById(@PathVariable UUID beerId){
+    public ResponseEntity<BeerDto> getBeerById(@PathVariable UUID beerId) throws Exception{
         return new ResponseEntity<>(BeerDto.builder().build(), HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity addBeer(@RequestBody BeerDto beerDto){
+    public ResponseEntity addBeer(@RequestBody BeerDto beerDto) throws Exception{
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
     @PutMapping("/{beerId}")
-    public ResponseEntity updateBeer(@PathVariable UUID beerId, @RequestBody BeerDto beerDto) {
+    public ResponseEntity updateBeer(@PathVariable UUID beerId, @RequestBody BeerDto beerDto) throws Exception {
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping("/{beerId}")
-    public ResponseEntity deleteBeer(@PathVariable UUID beerId) {
+    public ResponseEntity deleteBeer(@PathVariable UUID beerId) throws Exception {
         return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
 }
