@@ -1,0 +1,13 @@
+Adding @ConfigurationProperties("sfg.brewery") prefix to propertied defiend in the application.properties file
+@ConfigurationProperties works best with hierarchical properties that all have the same prefix.
+The Spring framework uses standard Java bean setters, so we must declare setters for each of the properties.
+
+using RestTemplateBuilder
+Best practice is to use create RestTemplateBuilder and then build RestTemplate from it. RestTemplateBuilder allows us to configure
+different properties such as security.
+
+we use constructo base injection to build restTemplateBuilder. Spring will inject RestTemplateBuilder thru the constructor
+private RestTemplate restTemplate;
+public ClassName(RestTemplateBuilder restTemplateBuilder) {
+    restTemplate = restTemplateBuilder.build();
+}
