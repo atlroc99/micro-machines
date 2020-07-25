@@ -1,0 +1,17 @@
+
+@RestController - contains / wrapps @Controller @ResponseBody
+
+
+Returning ResponseEntity<T> vs PlainDto
+- we can send PlainDto in the get mapping. Since we have @RestController annotated, SpringMVC will serialize
+the dto object to JSON.
+- Returning ResponseEntity<T> allows us more control of what we are sending with the dto, such as statuscode or messages
+    ex. new ResponseEntity<>(PlanDto, HttpStatus.OK);
+
+@PathVariable is optional if the {vairableName} matches the method argument names
+@GetMapping("/{beerId}")
+public ResponseEntity<BeerDto> getBeer(@PathVariable UUID beerId)
+
+
+
+
