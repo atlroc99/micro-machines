@@ -1,6 +1,9 @@
 package com.micromachine.mscbeerservice.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -12,6 +15,9 @@ import java.util.UUID;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Beer {
 
     @Id
@@ -34,7 +40,7 @@ public class Beer {
     private String beerStyle;
 
     @Column(unique = true)
-    private String upc;
+    private Long upc;
 
     private BigDecimal price;
 
