@@ -1,9 +1,7 @@
 package com.micromachine.mscbrewery.services;
 
 import com.micromachine.mscbrewery.web.model.BeerDto;
-import org.apache.commons.math.random.RandomData;
 import org.apache.commons.math.random.RandomDataImpl;
-import org.apache.commons.math.random.RandomGenerator;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
